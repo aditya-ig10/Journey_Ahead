@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey of Sonam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+</head>
+<body>
+    <div id="start-page" class="fullscreen-page">
+        <h1>Journey of Sonam</h1>
+        <p>Embark on an exciting adventure with Sonam as she discovers the world of Comic-Con!</p>
+        <button id="start-button">Start Journey</button>
+    </div>
+
+    <div id="story-container" class="hidden">
+        <h1 id="story-title">Journey of Sonam</h1>
+        <div id="stats-container">
+            <p id="score-display">Score: 0</p>
+        </div>
+        <div id="content-wrapper">
+            <div id="story-image"></div>
+            <div id="text-container">
+                <p id="story-text"></p>
+                <p id="weather-info"></p>
+            </div>
+        </div>
+        <div id="choice-buttons"></div>
+        <p id="timer-display" class="hidden"></p>
+        <button id="restart-button" class="hidden">↺</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
