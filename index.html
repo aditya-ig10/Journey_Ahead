@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journey of Sonam</title>
+    <title>Journey of Sonam!</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
+    <nav id="navbar">
+        <div class="nav-container">
+          <button2 class="nav-button active" data-target="home">Home</button2>
+          <button2 class="nav-button" data-target="about">About</button2>
+          <button2 class="nav-button" data-target="impact">Impact</button2>
+          <button2 class="nav-button" data-target="metrics">Metrics</button2>
+          <div class="nav-pill"></div>
+        </div>
+      </nav>
+
     <div id="start-page" class="fullscreen-page">
-        <h1>Journey of Sonam</h1>
-        <p>Embark on an exciting adventure with Sonam as she discovers the world of Comic-Con!</p>
+        <h1>Journey of Sonam!</h1>
+        <p1>A choice-based story where you decide the ending,</p1>
+        <p2>which holds countless twists and turns!</p2>
         <button id="start-button">Start Journey</button>
     </div>
 
@@ -28,11 +38,12 @@
             </div>
         </div>
         <div id="choice-buttons"></div>
-        <p id="timer-display" class="hidden"></p>
-        <button id="restart-button" class="hidden">↺</button>
+        <p id="timer-display" style="display: none;"></p>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <button id="restart-button" class="hidden">↺</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

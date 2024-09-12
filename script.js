@@ -467,7 +467,24 @@ document.addEventListener('DOMContentLoaded', () => {
     restartButton.classList.add('hidden');
 });
 
-// Add ripple effect to buttons
+function initializeNavbar() {
+    const navButtons = document.querySelectorAll('.nav-button');
+    const navPill = document.querySelector('.nav-pill');
+
+    navButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            navButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Move the pill
+            navPill.style.left = `${index * 25 + 5}%`;
+            
+            // Here you can add functionality for each button
+            console.log(`Clicked on ${button.textContent}`);
+        });
+    });
+}
+
 function createRipple(event) {
     const button = event.currentTarget;
     const circle = document.createElement('span');
@@ -692,14 +709,22 @@ function startStory() {
     showStoryPart(story.start);
     document.getElementById('start-page').classList.add('hidden');
     document.getElementById('story-container').classList.remove('hidden');
+    document.getElementById('navbar').style.display = 'flex'; // Show the navbar
     restartButton.classList.remove('hidden');
 }
 
 document.getElementById('start-button').addEventListener('click', startStory);
 restartButton.addEventListener('click', startStory);
 
-// Initialize the story
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('story-container').classList.add('hidden');
+    document.getElementById('navbar').style.display = 'none'; // Hide the navbar initially
     restartButton.classList.add('hidden');
+    initializeNavbar(); // Initialize the navbar
+    
+    // Add ripple effect to all buttons
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('click', createRipple);
+    });
 });
